@@ -1,0 +1,8 @@
+,event,timestamp,intent,text,confidence
+0,action,1633839574.6581712,action_session_start,,1.0
+1,action,1633839574.6582553,action_listen,,
+2,user,1633839574.6886654,rome_water_question,rome water question,0.9963369369506836
+3,action,1633839574.7308304,utter_river,,1.0
+4,bot,1633839574.7308693,,the Tiber,
+5,action,1633839574.7559018,utter_greet,,1.0
+6,bot,1633839574.7559283,,Hey! How are you?,

@@ -1,0 +1,53 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - rome_water_question
+  - brussels_water_question
+  - what_is_marine_vegetation_question
+  - health_benefits_marine_vegetation_question
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_river:
+  - text: "the Tiber"
+
+  utter_river_brussels:
+  - text: "the Senne"
+
+  utter_what_is_marine_vegetation:
+  - text: "Marine vegetation means any species of plant that, at any time in its life, must inhabit water, other than freshwater. This includes seagrasses, mangroves and marine algae."
+
+  utter_health_benefits_marine_vegetation:
+  - text: "Depending on the marine vegetation, it is highly nutritious and can contain a wide range of vitamins and minerals."
+
+actions:
+  - action_save_conv
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
