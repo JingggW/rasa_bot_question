@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,14 +77,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: rome_water_question
   examples: |
     - What river runs through Rome, Italy?
@@ -101,7 +93,7 @@ nlu:
     - What is the river in Rome called?
     - Rome's major river
     - rome has river?
-
+    - tell me about the river in rome
 - intent: brussels_water_question
   examples: |
     - What river runs through Brussels, Belgium?
@@ -109,13 +101,12 @@ nlu:
     - River Brussels
     - Brussels and river
     - Which rivers goes through Brussels?
-
+    - tell me about the river in brussel
 - intent: what_is_marine_vegetation_question
   examples: |
     - What is marine vegetation?
     - What are different kinds of marine vegetation?
     - Marine vegetation examples
-
 - intent: health_benefits_marine_vegetation_question
   examples: |
     - Health benefits of marine vegetation
