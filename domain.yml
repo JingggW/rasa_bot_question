@@ -1,34 +1,18 @@
-version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- rome_water_question:
-    use_entities: true
-- brussels_water_question:
-    use_entities: true
-- what_is_marine_vegetation_question:
-    use_entities: true
-- health_benefits_marine_vegetation_question:
-    use_entities: true
-entities: []
-slots: {}
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- rome_water_question
+- brussels_water_question
+- what_is_marine_vegetation_question
+- health_benefits_marine_vegetation_question
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -47,13 +31,18 @@ responses:
   - text: the Tiber
   utter_river_brussels:
   - text: the Senne
+  - text: The river in Brussels is the Senne
+  - text: The river Senne runs through Brussels
   utter_what_is_marine_vegetation:
-  - text: Marine vegetation means any species of plant that, at any time in its life, must inhabit water, other than freshwater. This includes seagrasses, mangroves and marine algae.
+  - text: Marine vegetation means any species of plant that, at any time in its life,
+      must inhabit water, other than freshwater. This includes seagrasses, mangroves
+      and marine algae.
+  - text: Marine vegetation include seagrasses, algae, and mangroves.  Marine vegetation
+      is the general name for any plant that lives in water other than freshwater.
   utter_health_benefits_marine_vegetation:
-  - text: Depending on the marine vegetation, it is highly nutritious and can contain a wide range of vitamins and minerals.
+  - text: Depending on the marine vegetation, it is highly nutritious and can contain
+      a wide range of vitamins and minerals.
   utter_programming:
   - text: I'm configuring the chatbot.
 actions:
 - action_save_conv
-forms: {}
-e2e_actions: []

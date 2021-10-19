@@ -40,3 +40,8 @@ stories:
   - intent: health_benefits_marine_vegetation_question
   - action: utter_health_benefits_marine_vegetation
   - action: action_save_conv
+- story: what is marine vegetation
+  steps:
+  - intent: what_is_marine_vegetation_question
+  - action: utter_what_is_marine_vegetation
+  - action: action_save_conv

@@ -94,6 +94,8 @@ nlu:
     - Rome's major river
     - rome has river?
     - tell me about the river in rome
+    - river rome
+    - can you tell me about the river in rome?
 - intent: brussels_water_question
   examples: |
     - What river runs through Brussels, Belgium?
@@ -102,13 +104,23 @@ nlu:
     - Brussels and river
     - Which rivers goes through Brussels?
     - tell me about the river in brussel
+    - brussels
+    - what about the river in brussels?
 - intent: what_is_marine_vegetation_question
   examples: |
     - What is marine vegetation?
     - What are different kinds of marine vegetation?
     - Marine vegetation examples
+    - what is marine vegetation
+    - what is marine veg?
+    - what is marine veigation
+    - marine veg
+    - what is marine veg
 - intent: health_benefits_marine_vegetation_question
   examples: |
     - Health benefits of marine vegetation
     - Algae seaweed health
     - health algae
+    - what are the health benefits of marine veg
+    - health algea
+    - health benefits marine veg
