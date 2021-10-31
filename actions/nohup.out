@@ -1,0 +1,28 @@
+2021-10-28 23:48:58 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2021-10-28 23:48:58 INFO     rasa_sdk.executor  - Registered function for 'action_save_conv'.
+2021-10-28 23:48:58 INFO     rasa_sdk.executor  - Registered function for 'action_session_start'.
+2021-10-28 23:48:58 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
+/home/ubuntu/venv/lib/python3.6/site-packages/rasa_sdk/utils.py:194: UserWarning: Your versions of rasa and rasa_sdk might not be compatible. You are currently running rasa version 2.1.2 and rasa_sdk version 2.8.2.
+To ensure compatibility use the same version for both, modulo the last number, i.e. using version A.B.x the numbers A and B should be identical for both rasa and rasa_sdk.
+  f"Your versions of rasa and "
+Exception occurred while handling uri: 'http://localhost:5055/webhook'
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/sanic/app.py", line 938, in handle_request
+    response = await response
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa_sdk/endpoint.py", line 104, in webhook
+    result = await executor.run(action_call)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa_sdk/executor.py", line 398, in run
+    action(dispatcher, tracker, domain)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa_sdk/utils.py", line 230, in call_potential_coroutine
+    return await coroutine_or_return_value
+  File "/home/ubuntu/question_bot/actions/actions.py", line 77, in run
+    events.extend(self.fetch_slots(tracker))
+AttributeError: 'ActionSessionStart' object has no attribute 'fetch_slots'
+2021-10-28 23:50:49 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2021-10-28 23:50:49 INFO     rasa_sdk.executor  - Registered function for 'action_save_conv'.
+2021-10-28 23:50:49 INFO     rasa_sdk.executor  - Registered function for 'action_session_start'.
+2021-10-28 23:50:49 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
+2021-10-28 23:53:20 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+2021-10-28 23:53:20 INFO     rasa_sdk.executor  - Registered function for 'action_save_conv'.
+2021-10-28 23:53:20 INFO     rasa_sdk.executor  - Registered function for 'action_session_start'.
+2021-10-28 23:53:20 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055

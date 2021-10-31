@@ -10,6 +10,7 @@
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet, SessionStarted, ActionExecuted, EventType
 from rasa_sdk.executor import CollectingDispatcher
 import csv
 import pandas as pd
@@ -23,7 +24,7 @@ class ActionHelloWorld(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         conversation = tracker.events
         event = []
         timestamp = []
@@ -53,8 +54,30 @@ class ActionHelloWorld(Action):
 
         d = {'event': event, 'timestamp': timestamp, 'intent': intent, 'text': text, 'confidence': confidence}
         df = pd.DataFrame(data=d)
-        df.to_csv('conv_logs.csv') 
+        df.to_csv('conv_logs.csv')
 
         dispatcher.utter_message(text="Hello World!")
 
         return []
+
+
+class ActionSessionStart(Action):
+    def name(self) -> Text:
+        return "action_session_start"
+
+    async def run(
+      self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        # the session should begin with a `session_started` event
+        events = [SessionStarted()]
+
+        # any slots that should be carried over should come after the
+        # `session_started` event
+        # events.extend(self.fetch_slots(tracker))
+        dispatcher.utter_message(text="Hello")
+        dispatcher.utter_message(text="Hola, I'm your question bot! Ask me a question!")
+        # an `action_listen` should be added at the end as a user message follows
+        events.append(ActionExecuted("action_listen"))
+
+        return events

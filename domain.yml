@@ -48,3 +48,4 @@ responses:
   - text: I'm configuring the chatbot.
 actions:
 - action_save_conv
+- action_session_start
