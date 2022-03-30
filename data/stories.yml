@@ -28,20 +28,19 @@ stories:
   steps:
   - intent: rome_water_question
   - action: utter_river
-  - action: utter_programming
-  - action: action_save_conv
 - story: brussels river
   steps:
   - intent: brussels_water_question
   - action: utter_river_brussels
-  - action: action_save_conv
 - story: marine vegg
   steps:
   - intent: health_benefits_marine_vegetation_question
   - action: utter_health_benefits_marine_vegetation
-  - action: action_save_conv
 - story: what is marine vegetation
   steps:
   - intent: what_is_marine_vegetation_question
   - action: utter_what_is_marine_vegetation
-  - action: action_save_conv
+- story: start conversation
+  steps:
+  - intent: greet
+  - action: utter_welcome

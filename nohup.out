@@ -1,0 +1,447 @@
+2022-03-30 03:33:59 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 03:33:59 INFO     rasa.model  - Loading model models/20220330-032222.tar.gz...
+2022-03-30 03:34:23 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 03:34:32 INFO     root  - Rasa server is up and running.
+2022-03-30 04:04:54 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 04:04:54 INFO     rasa.model  - Loading model models/20220330-032222.tar.gz...
+2022-03-30 04:05:18 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 04:05:26 INFO     root  - Rasa server is up and running.
+2022-03-30 04:25:24 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 04:25:24 INFO     rasa.model  - Loading model models/20220330-032222.tar.gz...
+2022-03-30 04:25:48 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 04:25:57 INFO     root  - Rasa server is up and running.
+2022-03-30 04:44:21 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 04:44:21 INFO     rasa.model  - Loading model models/20220330-032222.tar.gz...
+2022-03-30 04:44:45 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 04:44:54 INFO     root  - Rasa server is up and running.
+The client is using an unsupported version of the Socket.IO or Engine.IO protocols (further occurrences of this error will be logged with level INFO)
+2022-03-30 04:46:19 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:46:19 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:46:57 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:46:57 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:47:48 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:47:48 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:50:44 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:50:44 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:50:44 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:50:44 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:50:44 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:50:49 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:50:49 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:50:49 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:50:49 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:50:49 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:00 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:00 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:00 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:51:00 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:51:00 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:06 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:06 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 04:51:06 ERROR    rasa.core.actions.action  - Failed to run custom action 'action_session_start'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2022-03-30 04:51:06 ERROR    rasa.core.processor  - Encountered an exception while running action 'action_session_start'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "uvloop/loop.pyx", line 1974, in create_connection
+  File "uvloop/loop.pyx", line 1951, in uvloop.loop.Loop.create_connection
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 686, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/utils/endpoints.py", line 169, in request
+    **kwargs,
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/client.py", line 483, in _request
+    timeout=real_timeout
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/aiohttp/connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/processor.py", line 773, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "/home/ubuntu/venv/lib/python3.6/site-packages/rasa/core/actions/action.py", line 717, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-03-30 04:51:06 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('e8b00422b11d4e2c93a2e833d28d34f3', 'session_started', 'e8b00422b11d4e2c93a2e833d28d34f3')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 05:16:33 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 05:16:33 INFO     rasa.model  - Loading model models/20220330-051545.tar.gz...
+2022-03-30 05:16:56 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 05:17:04 INFO     root  - Rasa server is up and running.
+2022-03-30 05:18:01 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('c6cb24b3417b4a2b9218d47af4951c0c', 'session_started', 'c6cb24b3417b4a2b9218d47af4951c0c')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 05:18:01 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('c6cb24b3417b4a2b9218d47af4951c0c', 'session_started', 'c6cb24b3417b4a2b9218d47af4951c0c')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 05:18:08 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_1 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_1.session_start OR anon_1.session_start IS NULL) ORDER BY events.timestamp]
+[parameters: ('c6cb24b3417b4a2b9218d47af4951c0c', 'session_started', 'c6cb24b3417b4a2b9218d47af4951c0c')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 05:18:08 ERROR    rasa.core.tracker_store  - Error happened when trying to save conversation tracker to 'SQLTrackerStore'. Falling back to use the 'InMemoryTrackerStore'. Please investigate the following error: (sqlite3.OperationalError) no such table: events
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT events.id AS events_id, events.sender_id AS events_sender_id, events.type_name AS events_type_name, events.timestamp AS events_timestamp, events.intent_name AS events_intent_name, events.action_name AS events_action_name, events.data AS events_data 
+FROM events, (SELECT max(events.timestamp) AS session_start 
+FROM events 
+WHERE events.sender_id = ? AND events.type_name = ?) AS anon_2 
+WHERE events.sender_id = ? AND (events.timestamp >= anon_2.session_start OR anon_2.session_start IS NULL) ORDER BY events.timestamp) AS anon_1]
+[parameters: ('c6cb24b3417b4a2b9218d47af4951c0c', 'session_started', 'c6cb24b3417b4a2b9218d47af4951c0c')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8).
+2022-03-30 05:19:45 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 05:19:45 INFO     rasa.model  - Loading model models/20220330-051545.tar.gz...
+2022-03-30 05:20:09 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 05:20:18 INFO     root  - Rasa server is up and running.
+2022-03-30 05:20:30 INFO     root  - Starting Rasa server on http://localhost:5005
+2022-03-30 05:20:30 INFO     rasa.model  - Loading model models/20220330-051545.tar.gz...
+2022-03-30 05:20:53 WARNING  rasa.shared.utils.common  - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2022-03-30 05:21:02 INFO     root  - Rasa server is up and running.

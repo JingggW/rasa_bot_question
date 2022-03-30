@@ -27,6 +27,7 @@ responses:
   - text: Great, carry on!
   utter_goodbye:
   - text: Bye
+  - text: See ya!
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_river:
@@ -35,6 +36,7 @@ responses:
   - text: the Senne
   - text: The river in Brussels is the Senne
   - text: The river Senne runs through Brussels
+  - text: The Senne river
   utter_what_is_marine_vegetation:
   - text: Marine vegetation means any species of plant that, at any time in its life,
       must inhabit water, other than freshwater. This includes seagrasses, mangroves
@@ -46,6 +48,3 @@ responses:
       a wide range of vitamins and minerals.
   utter_programming:
   - text: I'm configuring the chatbot.
-actions:
-- action_save_conv
-- action_session_start

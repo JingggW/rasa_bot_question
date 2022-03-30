@@ -61,23 +61,23 @@ class ActionHelloWorld(Action):
         return []
 
 
-class ActionSessionStart(Action):
-    def name(self) -> Text:
-        return "action_session_start"
+#class ActionSessionStart(Action):
+#    def name(self) -> Text:
+#        return "action_session_start"
 
-    async def run(
-      self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
+#    async def run(
+#      self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+#    ) -> List[Dict[Text, Any]]:
 
         # the session should begin with a `session_started` event
-        events = [SessionStarted()]
+ #       events = [SessionStarted()]
 
         # any slots that should be carried over should come after the
         # `session_started` event
         # events.extend(self.fetch_slots(tracker))
-        dispatcher.utter_message(text="Hello")
-        dispatcher.utter_message(text="Hola, I'm your question bot! Ask me a question!")
+#        dispatcher.utter_message(text="Hello")
+#        dispatcher.utter_message(text="Hola, I'm your question bot! Ask me a question!")
         # an `action_listen` should be added at the end as a user message follows
-        events.append(ActionExecuted("action_listen"))
+#        events.append(ActionExecuted("action_listen"))
 
-        return events
+#        return events
