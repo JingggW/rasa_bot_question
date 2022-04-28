@@ -2,6 +2,7 @@ import sqlite3
 from sqlite3 import Error
 import json
 import pandas as pd
+import datetime
 
 # connect to sqlite3
 conn = sqlite3.connect('rasa.db')
@@ -18,4 +19,6 @@ for row in rows:
   info_df['sessionID'] = sessionID
   conv_output = pd.concat([conv_output, info_df])
 
-conv_output.to_csv("conversation_history.csv", index=False)
+# to find today's date
+date_info = datetime.date.today()
+conv_output.to_csv(str(date_info) + "_conversation_history.csv", index=False)
